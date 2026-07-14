@@ -18,9 +18,9 @@ export const officialGameFacts = {
   createdAt: '2023-03-24T11:39:09.4Z',
   updatedAt: '2026-07-12T20:19:33.71587Z',
   maxPlayers: 100,
-  activePlayersAtCheck: 1445,
-  visitsAtCheck: 2908648,
-  favoritesAtCheck: 44039,
+  activePlayersAtCheck: 1032,
+  visitsAtCheck: 2921415,
+  favoritesAtCheck: 44277,
   officialRobloxUrl:
     'https://www.roblox.com/games/12880465992/Deltarune-Connected',
   officialGroupUrl: 'https://www.roblox.com/communities/3135430/Viatrix',
