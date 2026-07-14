@@ -789,6 +789,7 @@ export const allCoreRoutes = [
   '/guides',
   '/characters',
   '/maps',
+  '/bosses',
   '/commands',
   '/codes',
   '/play',

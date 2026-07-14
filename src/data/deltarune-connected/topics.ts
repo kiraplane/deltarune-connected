@@ -94,6 +94,13 @@ export const topicPages = {
           'This page will expand only when current source material supports stable area names. It will not create thin Chapter 1, Chapter 2, or Hometown map pages merely because those phrases appear in ambiguous autocomplete suggestions.',
         ],
       },
+      {
+        heading: 'Area checklist for current servers',
+        paragraphs: [
+          'Use the spawn hub as the anchor, then check the character-selection area, social/showcase rooms, battle-enabled spaces, event scenes, and hidden-access branches separately. A doorway that exists in a video may belong to a different server build, so compare the upload date and rejoin once before retracing the route.',
+          'For boss or badge routes, write down the room you entered, the selected character, whether another player was required, and which prompt appeared. Those four details explain most route differences better than an old static map image.',
+        ],
+      },
     ],
     faq: [
       {
@@ -138,6 +145,19 @@ export const topicPages = {
         paragraphs: [
           'Community character pages document actions such as expressions, poses, sounds, battle-style animations, and character-specific jokes. These are attached to the selected morph and may be exposed through an action menu rather than a typed chat command.',
           'Open the character selector, choose a public morph, then inspect the visible action interface. If an action is missing, the character may have a shorter set, the server may be outdated, or an update may have changed that menu. Rejoin before assuming a secret command exists.',
+        ],
+      },
+      {
+        heading: 'Controls and battle-key checks',
+        paragraphs: [
+          'Use Roblox movement, camera, jump, and chat controls normally, then follow the action labels shown by the selected character. Battle keys can change with the morph, device, or current build; the on-screen prompt is the source of truth instead of a copied universal chart.',
+          'Before reporting a broken battle key, close chat, reset the character, test another public morph, and join a fresh server. On mobile or console, verify that the corresponding touch or controller prompt appears rather than assuming a keyboard-only action is missing.',
+        ],
+        bullets: [
+          'Movement and camera: use the standard Roblox controls for your device.',
+          'Character actions: read the visible action menu after selecting a morph.',
+          'Battle inputs: match the current prompt, not an old screenshot.',
+          'Chat commands: only use syntax published inside the current experience.',
         ],
       },
       {
@@ -264,6 +284,60 @@ export const topicPages = {
         question: 'Where are the official patch notes?',
         answer:
           'No complete public patch-note source was verified. This site separates official media/update timestamps from community observations.',
+      },
+    ],
+  },
+  bosses: {
+    route: '/bosses',
+    label: 'Bosses',
+    eyebrow: 'Battle Encounters',
+    title: 'Deltarune Connected Bosses and Battle Routes',
+    seoTitle: 'Deltarune Connected Bosses - Battle Routes and Access Checks',
+    seoDescription:
+      'Find Deltarune Connected boss and battle routes with server checks, character requirements, retry steps, and safe current-build guidance.',
+    summary:
+      'Boss access depends on the current showcase build, selected character, area state, and sometimes other players. Use a reproducible route instead of treating every DELTARUNE boss search result as this Roblox game.',
+    image: '/deltarune-connected/media/official-4.png',
+    updatedAt: CHECKED_AT,
+    featuredRoutes: ['/maps', '/commands', '/guides/roaring-knight'],
+    sections: [
+      {
+        heading: 'Confirm the encounter belongs to this game',
+        paragraphs: [
+          'Search results mix Viatrix\'s Roblox showcase with official DELTARUNE chapters and other fan games. A usable route should name the current Roblox area, show the character selector or interface, and match the official place rather than linking a map download.',
+          'The Roaring Knight guide is the clearest current battle-focused route on this site. Other encounters remain in this hub until stable access requirements can be verified across more than one current source.',
+        ],
+      },
+      {
+        heading: 'Boss access checklist',
+        paragraphs: [
+          'Join a current public server, choose the required public character if the route names one, and navigate from the spawn hub using the maps page. If the scene does not trigger, reset once and try a fresh server before changing the route.',
+        ],
+        bullets: [
+          'Match the video or guide date to the current build.',
+          'Check whether the encounter needs a second player or a specific morph.',
+          'Read the current battle prompts before pressing old chart keys.',
+          'Do not use scripts to force staff-only or removed encounters.',
+        ],
+      },
+      {
+        heading: 'Retry without losing the route',
+        paragraphs: [
+          'After a failed attempt, note the room, morph, server age, and last visible prompt. Change one variable at a time. This separates a combat mistake from a stale-server or access-condition problem.',
+          'If an encounter disappears after an update, keep the route marked as update-sensitive rather than presenting it as permanently removed.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Does Deltarune Connected have bosses?',
+        answer:
+          'It has battle and boss-style showcase encounters, but access can change with the current Roblox build and selected character.',
+      },
+      {
+        question: 'Why will a boss route not trigger?',
+        answer:
+          'Check the server build, required morph, other-player requirement, and current room prompt, then retry in a fresh public server.',
       },
     ],
   },

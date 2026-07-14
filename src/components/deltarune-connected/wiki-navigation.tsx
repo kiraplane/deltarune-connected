@@ -63,6 +63,7 @@ const wikiNavGroups: WikiNavGroup[] = [
     icon: Map,
     links: [
       { href: '/maps', label: 'Maps and Areas' },
+      { href: '/bosses', label: 'Bosses and Battles' },
       { href: '/commands', label: 'Commands and Actions' },
       { href: '/codes', label: 'Codes Status' },
     ],
