@@ -1,6 +1,6 @@
 import { officialGameFacts } from './sources';
 
-export const CODE_CHECKED_AT = '2026-07-14';
+export const CODE_CHECKED_AT = '2026-07-17';
 
 export const codeCheckSummary = {
   checkedAt: CODE_CHECKED_AT,
