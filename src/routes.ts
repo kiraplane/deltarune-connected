@@ -15,6 +15,7 @@ export enum Routes {
   Codes = '/codes',
   Play = '/play',
   Status = '/status',
+  Discord = '/discord',
   OfficialLinks = '/official-links',
   HowToPlayGuide = '/guides/how-to-play-deltarune-connected',
   CharacterSelectorGuide = '/guides/character-selector-and-actions',

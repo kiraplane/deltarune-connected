@@ -41,6 +41,7 @@ const wikiNavGroups: WikiNavGroup[] = [
       { href: '/', label: 'Home' },
       { href: '/guides/how-to-play-deltarune-connected', label: 'How to Play' },
       { href: '/play', label: 'Play on Roblox' },
+      { href: '/discord', label: 'Discord Status' },
       { href: '/official-links', label: 'Verified Links' },
     ],
   },

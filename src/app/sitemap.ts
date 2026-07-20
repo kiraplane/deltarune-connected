@@ -28,6 +28,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         Routes.Codes,
         Routes.Play,
         Routes.Status,
+        Routes.Discord,
         Routes.OfficialLinks,
       ].includes(route as Routes);
 
