@@ -1,10 +1,11 @@
 import { allCoreRoutes } from '@/data/deltarune-connected/guides';
+import { CONTENT_UPDATED_AT } from '@/data/deltarune-connected/sources';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
 import { getCanonicalBaseUrl } from '../lib/urls/urls';
 
-const stableLastModified = new Date('2026-10-12T00:00:00.000Z');
+const stableLastModified = new Date(`${CONTENT_UPDATED_AT}T00:00:00.000Z`);
 
 function getLocalizedRoute(locale: string, route: string) {
   if (locale === routing.defaultLocale) {
@@ -24,6 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         Routes.Guides,
         Routes.Characters,
         Routes.Maps,
+        Routes.Bosses,
         Routes.Commands,
         Routes.Codes,
         Routes.Play,

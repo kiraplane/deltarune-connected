@@ -2,6 +2,7 @@ import type { DataSource } from './types';
 
 export const CHECKED_AT = '2026-10-12';
 export const OFFICIAL_CHECKED_AT = '2026-10-12';
+export const CONTENT_UPDATED_AT = '2026-10-30';
 
 export const officialGameFacts = {
   name: 'Deltarune: Connected',

@@ -56,6 +56,7 @@ const wikiNavGroups: WikiNavGroup[] = [
       },
       { href: '/guides/hidden-characters', label: 'Hidden Characters' },
       { href: '/guides/roaring-knight', label: 'Roaring Knight' },
+      { href: '/guides/secrets', label: 'Secrets Checklist' },
       { href: '/guides/woody-friend-inside-me', label: 'Woody Access' },
     ],
   },

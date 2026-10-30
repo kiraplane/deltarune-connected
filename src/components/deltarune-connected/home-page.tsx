@@ -71,6 +71,7 @@ const quickLinks = [
   { label: 'Characters', href: '/characters' },
   { label: 'Hidden', href: '/guides/hidden-characters' },
   { label: 'Knight', href: '/guides/roaring-knight' },
+  { label: 'Secrets', href: '/guides/secrets' },
   { label: 'Maps', href: '/maps' },
   { label: 'Commands', href: '/commands' },
   { label: 'Codes', href: '/codes' },

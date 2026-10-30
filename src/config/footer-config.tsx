@@ -41,6 +41,11 @@ export function useFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
+          title: t('guides.items.secrets'),
+          href: Routes.SecretsGuide,
+          external: false,
+        },
+        {
           title: t('guides.items.platforms'),
           href: Routes.PlatformGuide,
           external: false,
