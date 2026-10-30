@@ -1,4 +1,4 @@
-import { CHECKED_AT, siteDescription } from './sources';
+import { CHECKED_AT, CONTENT_UPDATED_AT, siteDescription } from './sources';
 import type { Guide, GuideCategory, GuideVideo } from './types';
 
 const youtubeThumbnail = (id: string) =>
@@ -73,6 +73,49 @@ export const guideCategoryIntro: Record<GuideCategory, string> = {
     'Avoid fake downloads, scripts, APKs, commands from other games, and unverified community links.',
 };
 
+export const secretsChecklist: Array<{
+  step: string;
+  detail: string;
+  href: string;
+}> = [
+  {
+    step: 'Confirm the official place',
+    detail:
+      'Match Viatrix and Place ID 12880465992 before you follow any secret.',
+    href: '/play',
+  },
+  {
+    step: 'Check the live selector',
+    detail:
+      'A missing Roaring Knight, Woody, Titan, Madotsuki, or Green Ralsei entry is an access check.',
+    href: '/characters',
+  },
+  {
+    step: 'Follow the Roaring Knight play steps',
+    detail:
+      'Select the morph only if it is listed, then use the visible action menu in public rooms.',
+    href: '/guides/roaring-knight',
+  },
+  {
+    step: 'Walk one area branch',
+    detail:
+      'Start at the spawn hub and use the maps page. Do not download a chapter map.',
+    href: '/maps',
+  },
+  {
+    step: 'Retry a battle with one change',
+    detail:
+      'Use the bosses page to check morph, second-player, and current prompt requirements.',
+    href: '/bosses',
+  },
+  {
+    step: 'Ignore unverified codes and scripts',
+    detail:
+      'No active code is verified, and executors are not a secret-character method.',
+    href: '/codes',
+  },
+];
+
 export const relatedRouteLabels: Record<string, string> = {
   '/': 'Deltarune Connected Wiki',
   '/guides': 'All Guides',
@@ -88,6 +131,7 @@ export const relatedRouteLabels: Record<string, string> = {
   '/guides/character-selector-and-actions': 'Character Selector',
   '/guides/hidden-characters': 'Hidden Characters',
   '/guides/roaring-knight': 'Roaring Knight',
+  '/guides/secrets': 'Secrets Checklist',
   '/guides/woody-friend-inside-me': 'Woody Access',
   '/guides/lightners-live-update': 'Lightners Live Update',
   '/guides/mobile-and-console': 'Mobile and Console',
@@ -294,9 +338,11 @@ export const guides: Guide[] = [
     tags: ['Hidden', 'Characters', 'Safety'],
     relatedRoutes: [
       '/characters',
+      '/guides/secrets',
       '/guides/roaring-knight',
       '/guides/woody-friend-inside-me',
-      '/commands',
+      '/maps',
+      '/bosses',
     ],
     body: [
       {
@@ -364,50 +410,86 @@ export const guides: Guide[] = [
     title: 'How to Get Roaring Knight in Deltarune Connected',
     seoTitle: 'How to Get Roaring Knight in Deltarune Connected',
     seoDescription:
-      'Check the Roaring Knight access status in Deltarune Connected, why current videos show developer help, and what random reports do and do not prove.',
+      'Check how to obtain and play the Roaring Knight in Deltarune Connected, the current access boundary, and secrets players confuse with a public quest.',
     summary:
-      'There is no verified public Roaring Knight quest. Current evidence points to a developer character or random morphing, so avoid fake commands and scripts.',
+      'There is no verified public Roaring Knight quest. If the selector lists the morph, play it with the visible action menu. Otherwise the checked path is developer or random access, not a code or script.',
     category: 'Hidden Access',
     difficulty: 'Advanced',
     coverImageUrl: videos.roaringKnight.thumbnailUrl,
     publishedAt: CHECKED_AT,
-    updatedAt: CHECKED_AT,
+    updatedAt: CONTENT_UPDATED_AT,
     sourceStrategy: 'user_intent_youtube',
     sourceNotes:
-      'The selected video description explicitly mentions lead-developer help; Reddit discussion describes the appearance as random rather than a repeatable route.',
+      'Access note: a public session required a lead developer to apply the morph, and a community thread describes some appearances as random. Play steps cover what an account can do after the sprite is already equipped. No public quest is verified.',
     video: videos.roaringKnight,
     videoSearchQueries: [
       'How to get the Roaring Knight in Deltarune Connected Roblox',
       'Deltarune Connected Roaring Knight',
       'Deltarune Connected Roaring Knight random',
     ],
-    tags: ['Roaring Knight', 'Hidden', 'Status'],
+    tags: ['Roaring Knight', 'Hidden', 'Play'],
     relatedRoutes: [
-      '/guides/hidden-characters',
+      '/guides/secrets',
       '/characters',
-      '/commands',
-      '/status',
+      '/guides/hidden-characters',
+      '/maps',
+      '/bosses',
+      '/codes',
     ],
     body: [
       {
         heading: 'The short answer: there is no verified public quest',
         paragraphs: [
-          'Players search this exact question because Roaring Knight appearances are dramatic and recent videos make the morph look obtainable. The strongest current source context points the other way. One prominent video says the creator brought a lead developer into the game to turn them into a dev character. That is evidence of special access, not a normal unlock route.',
-          'A separate Reddit thread about finding the Roaring Knight attracted repeated questions about how to get the avatar. The only later answer described it as random. Random is still not a controlled method: it does not tell you a room, timer, command, badge, or guaranteed server action.',
+          'Players search this question because a Roaring Knight appearance looks like a normal unlock. The repeatable evidence points the other way. In a checked public session, a lead developer applied the morph as a developer character. That is special access, not a quest any account can copy. A community thread about finding the knight later described the appearance as random. Random still does not name a room, timer, command, badge, or guaranteed server action.',
+          'Use the obtain steps below as a status check. Use the play steps only after the sprite is already your active morph. The secrets checklist covers the other hidden morphs, rooms, and battles that get mixed into the same search.',
+        ],
+      },
+      {
+        heading: 'Obtain steps that stay inside the real game',
+        paragraphs: [
+          'Open the verified Viatrix experience, Place ID 12880465992, and join a fresh public server. If Roblox says there are no running experiences, refresh the official page and try another join before you follow a download or private client. Open the character selector and look for the Roaring Knight name.',
+          'If the name is listed, select it, wait for the sprite to finish loading, and continue with the play steps. If it is missing, stop. Staff can apply the morph in a public server; follow only prompts that appear in the game, and do not ask for internal tools. A random appearance still has no button you can farm. Codes, chat strings, and executors are not obtain methods.',
+        ],
+        bullets: [
+          'Confirm creator Viatrix and Place ID 12880465992.',
+          'Join a fresh public server, not a modified client.',
+          'Select Roaring Knight only when the current selector lists it.',
+          'If it is absent, check the official Roblox page and Viatrix group for a real release note.',
+          'Record the room only when the morph appears without a selector entry.',
+        ],
+      },
+      {
+        heading: 'How to play the morph once it is on your character',
+        paragraphs: [
+          'These steps start after Roaring Knight is already your active morph. They do not create the morph. Open the action menu in the spawn hub and try one visible expression or pose so you know the form loaded. Then walk a single labeled area. Checked public sessions move through hub, field, forest, and castle-style rooms. A scene can also drop you into an unexpected room, including a green room. Read the labels you can see and return to the hub instead of hunting a secret exit.',
+          'Other players can see the sprite. They may follow you or start a battle-style interaction. Use the prompts on screen, on your morph and on theirs. Do not type a command string, and do not assume a pose, sound, or spoken line from one session is still a button in the current build. When the scene is over, open the selector and choose a public character. Leaving the server does not publish the morph for anyone else.',
+        ],
+        bullets: [
+          'Confirm the sprite loaded before you leave the hub.',
+          'Move through one labeled area at a time.',
+          'Let other players opt into the scene and follow current battle prompts.',
+          'Re-select a public morph when you are done.',
+          'If the form is gone after a rejoin, the access was temporary.',
         ],
       },
       {
         heading: 'What the current evidence actually proves',
         paragraphs: [
-          'The video proves that a Roaring Knight morph existed and that a developer could apply it in that recording. The Reddit discussion suggests some players may encounter the morph without a clear manual trigger. Neither source establishes a public selector entry, a repeatable quest, a redeem code, or a chat command.',
-          'That distinction protects players from false guides. If a page claims you must enter a long script, join a private server, send an account cookie, or download a modified client, it is exploiting the lack of a public method. Leave the page and protect your Roblox account.',
+          'A developer-applied morph proves the sprite exists in that build and that staff tools can put it on a player. A random appearance proves some sessions show the form without a documented trigger. Neither result adds a public selector entry, a repeatable quest, a redeem code, or a chat command.',
+          'That split protects players from false guides. If a page tells you to paste a long script, join a private server, send an account cookie, or download a modified client, it is using the missing public method as bait. Leave the page and protect your Roblox account.',
         ],
       },
       {
-        heading: 'How to check the status safely',
+        heading: 'Secrets players confuse with the knight',
         paragraphs: [
-          'Join the verified Viatrix experience, use a fresh public server, and check the normal character selector. If Roaring Knight is not listed, look for a current announcement from the official Roblox page or Viatrix group. A legitimate public release should be visible through those surfaces or repeatable by ordinary players without staff intervention.',
-          "You can also compare current videos, but read descriptions rather than relying on titles. Words such as developer, early access, staff, showcase, or random change the meaning of the footage. Record the checked date because a future update could make today's restricted morph public.",
+          'Roaring Knight searches often arrive with Woody, Titan, Madotsuki, and Green Ralsei. Those morphs have their own access notes, and none of them is a reward for finishing a knight scene. A missing doorway is a maps question. A battle that will not start is a bosses question. The secrets checklist walks that split so one failed room is not treated as a hidden character.',
+        ],
+        bullets: [
+          'Woody uses the Woody access guide, not a knight route.',
+          'Other restricted names stay on the hidden-characters page.',
+          'Area branches belong on the maps page.',
+          'Battle triggers belong on the bosses page.',
+          'Codes remain at zero verified strings.',
         ],
       },
       {
@@ -434,12 +516,127 @@ export const guides: Guide[] = [
       {
         question: 'Can every player unlock Roaring Knight?',
         answer:
-          'No repeatable public method is verified. The strongest video evidence involves developer help, and another report calls access random.',
+          'No repeatable public method is verified. A checked session used developer help, and another report calls access random.',
+      },
+      {
+        question: 'How do I play as Roaring Knight after the morph loads?',
+        answer:
+          'Stay in the public server, test one visible action in the hub, walk one labeled area, and follow on-screen battle prompts. Then switch back to a public character.',
       },
       {
         question: 'Is there a Roaring Knight command?',
         answer:
           'No official public command is verified. Avoid scripts or executor instructions that claim otherwise.',
+      },
+    ],
+  },
+  {
+    slug: 'secrets',
+    title: 'Deltarune Connected Secrets Checklist',
+    seoTitle:
+      'Deltarune Connected Secrets Checklist - Characters, Maps, Bosses',
+    seoDescription:
+      'Run a Deltarune Connected secrets checklist for hidden morphs, Roaring Knight play steps, map branches, and boss triggers without codes or scripts.',
+    summary:
+      'Separate a missing selector entry, a room that failed to load, and a battle that needs another player. Roaring Knight and other secret characters stay on their access pages.',
+    category: 'Hidden Access',
+    difficulty: 'Beginner',
+    coverImageUrl: officialCover,
+    publishedAt: CONTENT_UPDATED_AT,
+    updatedAt: CONTENT_UPDATED_AT,
+    sourceStrategy: 'community_crosscheck',
+    sourceNotes:
+      'Checklist synthesizes the current character, map, boss, and code-watch pages. It does not add unverified room secrets, promo strings, or client tools.',
+    videoSearchQueries: [
+      'Deltarune Connected secrets',
+      'Deltarune Connected secret characters',
+      'Deltarune Connected hidden characters',
+    ],
+    tags: ['Secrets', 'Checklist', 'Characters'],
+    relatedRoutes: [
+      '/characters',
+      '/guides/roaring-knight',
+      '/guides/hidden-characters',
+      '/maps',
+      '/bosses',
+      '/codes',
+    ],
+    body: [
+      {
+        heading: 'Use one checklist instead of three rumors',
+        paragraphs: [
+          'Secret searches for Deltarune: Connected mix four different problems. A morph is missing from the selector. A doorway or prop did not load. A battle will not start. A code list from another game is sitting in the results. Those problems do not share a solution. This pass checks them in order, inside the official Roblox place, and stops when the evidence stops.',
+          'The experience is one public place by Viatrix, Place ID 12880465992. Official DELTARUNE chapter maps, DONTFORGET editors, and downloadable clients are different products. If a guide asks you to install one of those, you are no longer looking at this game.',
+        ],
+      },
+      {
+        heading: 'Secret characters: check the selector before the rumor',
+        paragraphs: [
+          'Join a fresh public server and open the character selector. Write down the names that are actually listed. Then compare the names players usually call secrets: Roaring Knight, Woody or Friend Inside Me, Titan, Madotsuki, and Green Ralsei. A name that is listed is a public morph for this server. Select it and use its action menu. A name that is missing is an access check, not a puzzle you failed.',
+          'Roaring Knight has its own obtain and play steps. Select it only when the menu shows it. If a lead developer or staff member applies it in a public server, follow the on-screen prompts and then use the play steps on that guide. Woody remains a permission or staff morph in current community notes. Titan, Madotsuki, and Green Ralsei stay on the hidden-characters page until a normal selector entry exists. No verified code turns any of those names on.',
+        ],
+        bullets: [
+          'Listed in the selector: choose it and learn that action set.',
+          'Roaring Knight missing: stop at the obtain check. Do not farm a room.',
+          'Woody missing: read the Woody access guide.',
+          'Other missing names: use the hidden-characters labels.',
+          'Staff present: record that. Do not request tools or payment.',
+        ],
+      },
+      {
+        heading: 'Map secrets: one branch from the spawn hub',
+        paragraphs: [
+          'After the selector check, walk the spawn hub and pick one visible branch. Use the maps page for the safe navigation routine: spawn, character area, social or showcase rooms, battle-enabled spaces, and event scenes. The official media shows different interiors inside one place. It does not publish separate downloadable chapter maps.',
+          'If a doorway, prop, or scene from a clip is missing, rejoin one fresh public server before you retrace the route. Note the room or landmark, the morph you had selected, and the last prompt on screen. A changed door after a battle or showcase scene is worth writing down. It is not proof that a hidden morph is behind it. Skip any page that offers a map file, editor, or chapter download.',
+        ],
+        bullets: [
+          'Anchor at the spawn hub.',
+          'Explore one branch, then return.',
+          'Rejoin once if an object fails to load.',
+          'Keep area notes on the maps page, not in a fake chapter list.',
+        ],
+      },
+      {
+        heading: 'Boss secrets: change one condition at a time',
+        paragraphs: [
+          'Battle-style secrets belong on the bosses page. Join a current public server, use a public morph unless the route names one that is actually in your selector, and start from the same hub you used for the map check. If the scene does not trigger, reset once and try a fresh server before you change the route.',
+          'Write down whether the encounter asked for a second player, a specific morph, or a prompt you do not see. Match the guide date to the build you are in. Roaring Knight is the clearest current battle-focused character page, and it is still an access check rather than a guaranteed boss unlock. Do not use a script to force a staff-only or removed encounter.',
+        ],
+        bullets: [
+          'Confirm the encounter is in this Roblox place.',
+          'Check morph, second player, and the current prompt.',
+          'Change one of those variables, then retry.',
+          'Leave removed encounters marked as update-sensitive.',
+        ],
+      },
+      {
+        heading: 'What to ignore, and what to write down',
+        paragraphs: [
+          'The codes page is still a watch page. The official Roblox description and the Viatrix group do not publish a redeem list, and no public redeem field is verified. A string copied from another Roblox game will not open a secret here. Scripts, executors, texture packs, APKs, and anyone asking for a password or account cookie are account risks, not hidden-content tools.',
+          'A useful secret report answers four questions: which morph or room you saw, whether a normal selector or doorway showed it, whether staff were in the server, and whether another ordinary player could repeat it. Say that it happened in one server. Do not turn one appearance into a permanent unlock for everyone.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Are there secret characters in Deltarune Connected?',
+        answer:
+          'Unusual morphs exist, including Roaring Knight and Woody. Current evidence puts several of them on staff, developer, random, or exclusive access rather than a public quest.',
+      },
+      {
+        question: 'Does a code unlock secrets?',
+        answer:
+          'No verified active code or public redeem system does that. Check the codes page before you type a string from another game.',
+      },
+      {
+        question: 'Where are the secret maps?',
+        answer:
+          'There is one verified public Roblox place. Use the maps page for in-game branches. Chapter-map downloads usually belong to other games.',
+      },
+      {
+        question: 'Is the Roaring Knight a secret boss route?',
+        answer:
+          'It is a restricted or random morph with separate play steps once you have it. It is not a verified public boss unlock. Use the bosses page for other encounters.',
       },
     ],
   },
@@ -450,7 +647,7 @@ export const guides: Guide[] = [
     seoDescription:
       'Check the Woody or Friend Inside Me hidden-character status in Deltarune Connected, current staff-access evidence, actions, and update context.',
     summary:
-      'Woody exists as a hidden character, but current community evidence says permission or staff morphing is required; the video does not prove a public unlock.',
+      'Woody exists as a hidden character. Current community evidence requires permission or staff morphing, and a public unlock is not verified.',
     category: 'Hidden Access',
     difficulty: 'Intermediate',
     coverImageUrl: videos.woody.thumbnailUrl,
@@ -468,6 +665,7 @@ export const guides: Guide[] = [
     tags: ['Woody', 'Friend Inside Me', 'Hidden'],
     relatedRoutes: [
       '/guides/hidden-characters',
+      '/guides/secrets',
       '/characters',
       '/guides/roaring-knight',
       '/guides/character-selector-and-actions',

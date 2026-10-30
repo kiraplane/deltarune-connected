@@ -3,7 +3,11 @@ import Container from '@/components/layout/container';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { guideCategoryIntro, guides } from '@/data/deltarune-connected/guides';
+import {
+  guideCategoryIntro,
+  guides,
+  secretsChecklist,
+} from '@/data/deltarune-connected/guides';
 import { officialGameFacts } from '@/data/deltarune-connected/sources';
 import { LocaleLink } from '@/i18n/navigation';
 import { constructMetadata } from '@/lib/metadata';
@@ -20,7 +24,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: 'Deltarune Connected Guides - Characters, Updates and Roblox Help',
     description:
-      'Read Deltarune Connected guides for character actions, hidden morphs, Roaring Knight, Woody, Lightners Live, mobile, console, and safe Roblox access.',
+      'Read Deltarune Connected guides for character actions, a secrets checklist, Roaring Knight, maps, bosses, Woody, Lightners Live, and safe Roblox access.',
     locale,
     pathname: '/guides',
     image: '/deltarune-connected/media/official-1.png',
@@ -54,8 +58,37 @@ export default function GuidesPage() {
             Practical Roblox guides for choosing characters, understanding
             hidden access, following current update content, and solving mobile
             or console problems without importing mechanics from another game.
+            The secrets checklist splits selector misses, map branches, and boss
+            triggers.
           </p>
         </header>
+
+        <section className="rounded-lg border border-[#32364A] bg-[#10131F] p-6">
+          <h2 className="font-display text-2xl font-bold">Secrets checklist</h2>
+          <p className="mt-3 max-w-3xl text-[#C5C8D8] leading-8">
+            Use this pass when a morph, room, or battle looks hidden. Area
+            questions continue on maps. Battle questions continue on bosses.
+            Roaring Knight obtain and play steps stay on the character hub and
+            the Roaring Knight guide.
+          </p>
+          <ol className="mt-5 grid gap-3 md:grid-cols-2">
+            {secretsChecklist.map((item, index) => (
+              <li key={item.step}>
+                <LocaleLink
+                  href={item.href}
+                  className="block h-full rounded-lg border border-[#32364A] bg-[#05060A] p-4 transition hover:border-[#67E8F9]"
+                >
+                  <p className="font-semibold text-[#FDE68A]">
+                    {index + 1}. {item.step}
+                  </p>
+                  <p className="mt-2 text-[#C5C8D8] text-sm leading-6">
+                    {item.detail}
+                  </p>
+                </LocaleLink>
+              </li>
+            ))}
+          </ol>
+        </section>
 
         <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {categories.map((category) => (
@@ -135,6 +168,11 @@ export default function GuidesPage() {
               question: 'Which guide should I read first?',
               answer:
                 'Start with How to Play, then use the character selector guide. Read hidden-character pages only when a morph is absent from the public selector.',
+            },
+            {
+              question: 'Where is the secrets checklist?',
+              answer:
+                'Use the secrets guide on this page, then follow maps for area branches and bosses for battle triggers. Roaring Knight steps stay on the character hub and the Roaring Knight guide.',
             },
             {
               question: 'Why is there no tier list?',

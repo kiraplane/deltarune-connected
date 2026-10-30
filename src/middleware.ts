@@ -31,6 +31,14 @@ const retiredPublicRouteRedirects: Array<{
     target: '/guides/roaring-knight',
   },
   {
+    pattern: /^\/secrets?\/?$/,
+    target: '/guides/secrets',
+  },
+  {
+    pattern: /^\/secret-characters?\/?$/,
+    target: '/guides/secrets',
+  },
+  {
     pattern: /^\/mobile\/?$/,
     target: '/guides/mobile-and-console',
   },

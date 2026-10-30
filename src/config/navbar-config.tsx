@@ -11,6 +11,7 @@ import {
   Map,
   RadioTower,
   Smartphone,
+  Swords,
   Users,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -79,8 +80,16 @@ export function useNavbarLinks(): NestedMenuItem[] {
         },
         {
           title: 'Roaring Knight',
-          description: 'Developer/random access status without fake commands.',
+          description: 'Obtain check and play steps without fake commands.',
           href: Routes.RoaringKnightGuide,
+          external: false,
+          icon: <LockKeyhole className="size-4" />,
+        },
+        {
+          title: 'Secrets Checklist',
+          description:
+            'Hidden morphs, map branches, and boss triggers in one pass.',
+          href: Routes.SecretsGuide,
           external: false,
           icon: <LockKeyhole className="size-4" />,
         },
@@ -98,6 +107,13 @@ export function useNavbarLinks(): NestedMenuItem[] {
           href: Routes.Maps,
           external: false,
           icon: <Map className="size-4" />,
+        },
+        {
+          title: 'Bosses + Battles',
+          description: 'Battle routes, morph checks, and fresh-server retries.',
+          href: Routes.Bosses,
+          external: false,
+          icon: <Swords className="size-4" />,
         },
         {
           title: 'Commands + Actions',
